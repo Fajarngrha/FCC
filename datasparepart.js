@@ -1,49 +1,75 @@
-window.onload = function() {
-    // Ambil data sparepart dari localStorage
-    const spareparts = JSON.parse(localStorage.getItem('spareparts')) || [];
+// Modal functionality
+const addSparepartBtn = document.getElementById('addSparepartBtn');
+const addSparepartModal = document.getElementById('addSparepartModal');
+const closeModalBtn = document.querySelector('.close-btn');
+const addSparepartForm = document.getElementById('addSparepartForm');
 
-    // Ambil elemen tabel
-    const tableBody = document.getElementById('sparepartData').getElementsByTagName('tbody')[0];
-
-    // Tambahkan data ke dalam tabel
-    spareparts.forEach(sparepart => {
-        const row = document.createElement('tr');
-        row.innerHTML = `
-            <td>${sparepart.locator}</td>
-            <td>${sparepart.name}</td>
-            <td>${sparepart.type}</td>
-            <td>${sparepart.merk}</td>
-            <td>${sparepart.quantity}</td>
-            <td>${sparepart.for}</td>
-            <td>${sparepart.remark}</td>
-        `;
-        tableBody.appendChild(row);
-    });
+// Open modal
+addSparepartBtn.onclick = () => {
+    addSparepartModal.style.display = 'block';
 };
 
-// Fungsi untuk mencari data
-function searchData() {
-    const searchValue = document.getElementById('searchBar').value.toLowerCase();
-    const rows = document.getElementById('sparepartData').getElementsByTagName('tr');
+// Close modal
+closeModalBtn.onclick = () => {
+    addSparepartModal.style.display = 'none';
+};
 
-    // Loop melalui semua baris tabel
-    for (let i = 1; i < rows.length; i++) {
-        const cells = rows[i].getElementsByTagName('td');
-        let match = false;
+// Add sparepart form submission
+addSparepartForm.onsubmit = (e) => {
+    e.preventDefault();
+    
+    const newSparepart = {
+        locator: document.getElementById('locator').value,
+        name: document.getElementById('name').value,
+        type: document.getElementById('type').value,
+        merk: document.getElementById('merk').value,
+        quantity: document.getElementById('quantity').value,
+        for: document.getElementById('for').value,
+        remark: document.getElementById('remark').value,
+    };
+    
+    addSparepartToTable(newSparepart);
+    addSparepartModal.style.display = 'none';
+    addSparepartForm.reset();
+};
 
-        // Loop melalui setiap kolom pada baris
-        for (let j = 0; j < cells.length; j++) {
-            if (cells[j].innerText.toLowerCase().includes(searchValue)) {
-                match = true;
-                break; // Jika ditemukan kecocokan, keluar dari loop
+// Function to add sparepart to table
+const addSparepartToTable = (sparepart) => {
+    const tableBody = document.getElementById('tableBody');
+    const row = document.createElement('tr');
+    
+    row.innerHTML = `
+        <td>${sparepart.locator}</td>
+        <td>${sparepart.name}</td>
+        <td>${sparepart.type}</td>
+        <td>${sparepart.merk}</td>
+        <td>${sparepart.quantity}</td>
+        <td>${sparepart.for}</td>
+        <td>${sparepart.remark}</td>
+    `;
+    
+    tableBody.appendChild(row);
+};
+
+// Search functionality
+document.getElementById('searchInput').addEventListener('input', (e) => {
+    const searchTerm = e.target.value.toLowerCase();
+    const rows = document.querySelectorAll('#tableBody tr');
+    
+    rows.forEach(row => {
+        const cells = row.getElementsByTagName('td');
+        let matchFound = false;
+        
+        Array.from(cells).forEach(cell => {
+            if (cell.textContent.toLowerCase().includes(searchTerm)) {
+                matchFound = true;
             }
-        }
-
-        // Tampilkan atau sembunyikan baris berdasarkan pencarian
-        if (match) {
-            rows[i].style.display = '';
+        });
+        
+        if (matchFound) {
+            row.style.display = '';
         } else {
-            rows[i].style.display = 'none';
+            row.style.display = 'none';
         }
-    }
-}
+    });
+});

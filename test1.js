@@ -19,7 +19,7 @@ const closeModal = () => {
 
 // Redirect to the view results page
 const goToResults = () => {
-    window.location.href = 'Troubleshoot.html'; // Redirect to the "View Working Orders" page
+    window.location.href = 'test.html'; // Redirect to the "View Working Orders" page
 };
 
 // Event listener for the form submission

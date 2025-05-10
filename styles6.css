@@ -1,0 +1,133 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+
+/* Search Section */
+.search-section {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#searchInput {
+    padding: 10px;
+    font-size: 0.8em;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Data Table Styles */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.data-table th, .data-table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.data-table th {
+    background-color: #2980b9;
+    color: white;
+}
+
+.data-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Status Dropdown */
+.data-table select {
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    font-size: 0.9em;
+}
+
+/* Button Styles */
+.btn-container {
+    margin-top: auto;
+    text-align: center;
+}
+
+.btn-back {
+    background-color: #2980b9;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    margin-top: 500px; /* Push the button to the bottom */
+}
+
+.btn-back:hover {
+    background-color: #3498db;
+}
+
+/* Responsive Design */
+@media (max-width: 5000px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .data-table th, .data-table td {
+        font-size: 0.8em;
+    }
+
+    .btn-back {
+        font-size: 1em;
+    }
+
+    #searchInput {
+        width: 100%;
+    }
+}

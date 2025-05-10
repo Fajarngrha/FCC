@@ -22,7 +22,7 @@ body {
 }
 
 .form-box {
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(141, 140, 140, 0.5);
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -37,7 +37,7 @@ h2 {
     color: #333;
 }
 
-.input-group {
+/* .input-group {
     margin-bottom: 20px;
     text-align: left;
 }
@@ -54,7 +54,30 @@ h2 {
     border: 1px solid #ccc;
     border-radius: 4px;
     background-color: #f9f9f9;
+} */
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
 }
+
+label {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    margin-top: 5px;
+    background-color: #fff;
+}
+
 
 button {
     width: 100%;

@@ -35,26 +35,52 @@ function changeBackground() {
     body.style.backgroundAttachment = "fixed";
 }
 
-document.getElementById('login-form').addEventListener('submit', function(e) {
+// document.getElementById('login-form').addEventListener('submit', function(e) {
+//     e.preventDefault();
+
+//     // Ambil data dari form login
+//     let username = document.getElementById('login-username').value;
+//     let password = document.getElementById('login-password').value;
+
+//     // Ambil data pengguna dari localStorage
+//     let users = JSON.parse(localStorage.getItem('users'));
+
+//     // Cek apakah ada pengguna dengan username dan password yang sesuai
+//     let userFound = users && users.find(user => user.username === username && user.password === password);
+
+//     if (userFound) {
+//         alert('Login berhasil!');
+//         window.location.href = 'home.html'; // Alihkan ke halaman home setelah login berhasil
+//     } else {
+//         alert('Username atau Password salah!');
+//     }
+// });
+
+document.getElementById('login').addEventListener('submit', function(e) {
     e.preventDefault();
 
     // Ambil data dari form login
-    let username = document.getElementById('login-username').value;
-    let password = document.getElementById('login-password').value;
+    let username = document.getElementById('username').value;
+    let password = document.getElementById('password').value;
 
-    // Ambil data pengguna dari localStorage
-    let users = JSON.parse(localStorage.getItem('users'));
-
-    // Cek apakah ada pengguna dengan username dan password yang sesuai
-    let userFound = users && users.find(user => user.username === username && user.password === password);
-
-    if (userFound) {
-        alert('Login berhasil!');
-        window.location.href = 'home.html'; // Alihkan ke halaman home setelah login berhasil
+    // Cek apakah ada data pengguna di localStorage
+    if (localStorage.getItem('users')) {
+        let users = JSON.parse(localStorage.getItem('users'));
+        
+        // Cari pengguna yang sesuai dengan username dan password
+        let user = users.find(u => u.username === username && u.password === password);
+        
+        if (user) {
+            alert('Login berhasil!');
+            window.location.href = 'home.html'; // Alihkan ke halaman dashboard setelah login berhasil
+        } else {
+            alert('Username atau password salah!');
+        }
     } else {
-        alert('Username atau Password salah!');
+        alert('Belum ada pengguna yang terdaftar.');
     }
 });
+
 
 
 
