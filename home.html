@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="profile">
+                <img src="/images/profile.png" alt="Profile Picture" class="profile-img">
+                <p cl21ass="profile-name" id="user-name">Fauzan Yuda Kusuma</p> <!-- Name will be replaced here -->
+                <p class="profile-role">Maintenance</p>
+            </div>
+            <ul class="menu">
+                <li><a href="#" id="dataSparePartBtn">Data Spare part</a></li>
+                <li><a href="#" id="workingorderBtn">Working Order</a></li>
+                <li><a href="#" id="TroubleshootBtn">Troubleshoot Machine</a></li>
+                <li><a href="#" id="HistoryMachineBtn">History Machine</a></li>
+            </ul>
+        </nav>
+        <main class="main-content">
+            <div class="dashboard">
+                <div class="stat-card">
+                    <img src="/images/users.png" alt="Machine" class="imgpict">
+                    <p class="stat-title">Users</p>
+                    <p class="stat-value" id="user-count">16</p>
+                </div>
+                <div class="stat-card">
+                    <img src="/images/users.png" alt="Machine" class="imgpict">
+                    <p class="stat-title">Troubleshoot Machine</p>
+                    <p class="stat-value" id="machine-count">25</p>
+                </div>
+                <div class="stat-card">
+                    <img src="/images/users.png" alt="Machine" class="imgpict">
+                    <p class="stat-title">Working Order</p>
+                    <p class="stat-value" id="work-count">6</p>
+                </div>
+            </div>
+            <div class="image-gallery">
+                <div class="image-card">
+                    <img src="/images/gbr1.jpg" alt="Machine" class="image">
+                </div>
+                <div class="image-card">
+                    <img src="/images/bg-2.jpg" alt="Tools" class="image">
+                </div>
+                <div class="image-card">
+                    <img src="/images/bg_1.jpg" alt="Factory" class="image">
+                </div>
+                <div class="image-card">
+                    <img src="/images/gbr2.jpg" alt="Circuit" class="image">
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="home.js"></script>
+</body>
+</html>

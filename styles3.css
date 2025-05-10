@@ -1,0 +1,183 @@
+.card-header {
+    background-color: #0056b3;
+    color: white;
+    text-align: center;
+}
+
+.table th, .table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table thead {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* .btn-custom {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    font-weight: bold;
+    
+    border-radius: 5px;
+    gap: 10px;
+}
+
+
+.btn-custom:hover {
+    background-color: #f6fcf6;
+} */
+
+/* .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px;
+  }
+  
+  /* Style for the search bar */
+/* .search-bar {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 40%;
+  } */ 
+ /* Style for the button container */
+.button-container {
+    display: contents;
+    justify-content: last baseline;
+    margin: 10px;
+
+  }
+  
+  /* Style for the 'Back' button */
+  .back-button {
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: rgb(253, 251, 251);
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .back-button:hover {
+    background-color: #156d28;
+    transform: scale(1.05);
+  }
+  
+  .back-button:active {
+    background-color: #156d28;
+  }
+  
+  /* Style for the 'Add Sparepart' button */
+  .add-sparepart-button {
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: rgb(252, 251, 251);
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .add-sparepart-button:hover {
+    background-color: #156d28;
+    transform: scale(1.05);
+  }
+  
+  .add-sparepart-button:active {
+    background-color: #156d28;
+  }
+
+  .w-50{
+    display: flex;
+
+  }
+  
+
+.container {
+    margin-top: 50px;
+}
+
+
+
+.table-container {
+    overflow-x: auto;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #f8f9fa;
+}
+
+/* Styling untuk sidebar */
+ /* #sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #1d3d59;
+    color: white;
+}
+
+#sidebar .nav-item {
+    margin-bottom: 15px;
+}
+
+#sidebar .nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#sidebar .nav-link:hover {
+    color: #4CAF50;
+}
+
+#page-content-wrapper {
+    margin-left: 250px;
+    padding: 20px;
+} */
+
+.d-flex {
+    display: flex;
+    
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.w-50 {
+    width: 90%;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem;
+} 
+
+/* Styling untuk search bar */
+#searchBar {
+    height: 38px;
+    padding-left: 15px;
+
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #f8f9fa;
+}
+
+
